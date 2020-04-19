@@ -11,38 +11,40 @@ import WebKit
 
 class ViewController: UIViewController {
 
-    let webcamControlUrl = "http://172.20.97.149:5000"
+    let webcamControlUrlString = "http://172.20.97.149:5000"
+    let webcamViewUrlString = "http://172.20.97.149:8081"
+    
     @IBOutlet weak var webView: WKWebView!
     @IBAction func turnUp(_ sender: UIButton? = nil) {
-        let url = URL(string: webcamControlUrl+"/move?movedir=up")
+        let url = URL(string: webcamControlUrlString+"/move?movedir=up")
         URLSession.shared.dataTask(with: url!) {(data,response,error) in
             print(String(data: data!, encoding: .utf8) ?? "No return data")
         }.resume()
     }
     
     @IBAction func turnLeft(_ sender: UIButton? = nil) {
-        let url = URL(string: webcamControlUrl+"/move?movedir=left")
+        let url = URL(string: webcamControlUrlString+"/move?movedir=left")
         URLSession.shared.dataTask(with: url!) {(data,response,error) in
             print(String(data: data!, encoding: .utf8) ?? "No return data")
         }.resume()
     }
     
     @IBAction func center(_ sender: UIButton) {
-        let url = URL(string: webcamControlUrl+"/move?movedir=center")
+        let url = URL(string: webcamControlUrlString+"/move?movedir=center")
         URLSession.shared.dataTask(with: url!) {(data,response,error) in
             print(String(data: data!, encoding: .utf8) ?? "No return data")
         }.resume()
     }
     
     @IBAction func turnRight(_ sender: UIButton? = nil) {
-        let url = URL(string: webcamControlUrl+"/move?movedir=right")
+        let url = URL(string: webcamControlUrlString+"/move?movedir=right")
         URLSession.shared.dataTask(with: url!) {(data,response,error) in
             print(String(data: data!, encoding: .utf8) ?? "No return data")
         }.resume()
     }
     
     @IBAction func turnDown(_ sender: Any? = nil) {
-        let url = URL(string: webcamControlUrl+"/move?movedir=down")
+        let url = URL(string: webcamControlUrlString+"/move?movedir=down")
         URLSession.shared.dataTask(with: url!) {(data,response,error) in
             print(String(data: data!, encoding: .utf8) ?? "No return data")
         }.resume()
@@ -66,28 +68,16 @@ class ViewController: UIViewController {
             }}
     }
     
-    @IBOutlet weak var webcamMoveView: UIView!
-   
+    @IBAction func reconnect(_ sender: UIButton) {
+        let request = URLRequest(url: URL(string: webcamViewUrlString)!)
+
+        webView.load(request)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(webcamMovement(recognizer:)))
-        swipeLeft.direction = .left
-        webcamMoveView.addGestureRecognizer(swipeLeft)
-        
-        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(webcamMovement(recognizer:)))
-        swipeRight.direction = .right
-        webcamMoveView.addGestureRecognizer(swipeRight)
-        
-        let swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(webcamMovement(recognizer:)))
-        swipeUp.direction = .up
-        webcamMoveView.addGestureRecognizer(swipeUp)
-        
-        let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(webcamMovement(recognizer:)))
-        swipeDown.direction = .down
-        webcamMoveView.addGestureRecognizer(swipeDown)
-    
-        let request = URLRequest(url: URL(string: "http://172.20.97.149:8081")!)
+        let request = URLRequest(url: URL(string: webcamViewUrlString)!)
 
         webView.load(request)
         
