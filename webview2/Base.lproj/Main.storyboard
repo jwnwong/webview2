@@ -28,7 +28,7 @@
                                 </wkWebViewConfiguration>
                             </wkWebView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="pzE-2q-caP">
-                                <rect key="frame" x="131" y="415.5" width="152" height="228"/>
+                                <rect key="frame" x="131" y="415.5" width="152" height="178"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xyz-EX-JnY">
                                         <rect key="frame" x="61" y="0.0" width="30" height="54"/>
@@ -78,14 +78,6 @@
                                             <action selector="turnDown:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0UJ-8O-VcJ"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AFn-Xp-T2Q">
-                                        <rect key="frame" x="18" y="186" width="116" height="42"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <state key="normal" title="Reconnect"/>
-                                        <connections>
-                                            <action selector="reconnect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DdY-dp-RDg"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -125,7 +117,20 @@
                         </variation>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Parker View" id="eI5-Uf-T4C"/>
+                    <navigationItem key="navigationItem" title="Parker View" id="eI5-Uf-T4C">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="play" id="nbc-Bz-eez">
+                                <connections>
+                                    <action selector="playWebcam:" destination="BYZ-38-t0r" id="RMc-uG-i8b"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="pause" id="o5t-gu-Cxh">
+                                <connections>
+                                    <action selector="stopWebcam:" destination="BYZ-38-t0r" id="Eym-nE-rvw"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="webView" destination="F72-dq-es4" id="3Q9-OT-1yA"/>

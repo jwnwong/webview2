@@ -50,40 +50,29 @@ class ViewController: UIViewController {
         }.resume()
     }
     
-    @objc func webcamMovement(recognizer: UIGestureRecognizer) {
-        print("Swiped!!")
-        if let recognizer = recognizer as? UISwipeGestureRecognizer {
-            if recognizer.direction == .up {
-                print("turn up")
-                turnUp()
-            } else if recognizer.direction == .down {
-                print("turn down")
-                turnDown()
-            } else if recognizer.direction == .right {
-                print("turn right")
-                turnRight()
-            } else if recognizer.direction == .left {
-                print("turn left")
-                turnLeft()
-            }}
-    }
-    
-    @IBAction func reconnect(_ sender: UIButton) {
+    @IBAction func playWebcam(_ sender: UIBarButtonItem) {
         let request = URLRequest(url: URL(string: webcamViewUrlString)!)
-
         webView.load(request)
     }
     
-    override func viewDidLoad() {
+    @IBAction func stopWebcam(_ sender: UIBarButtonItem) {
+        webView.stopLoading()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        let request = URLRequest(url: URL(string: webcamViewUrlString)!)
+        webView.load(request)
+    }
+    
+ /*   override func viewDidLoad() {
+        
         super.viewDidLoad()
-
+        
         let request = URLRequest(url: URL(string: webcamViewUrlString)!)
-
         webView.load(request)
         
-        
-    }
-
-
+    } */
 }
 
