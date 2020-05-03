@@ -18,7 +18,7 @@ class VideoListViewController: UIViewController {
     // let videoURL = URL(string: "https://wolverine.raywenderlich.com/content/ios/tutorials/video_streaming/foxVillage.mp4")
     // let videoURL = URL(string: "http://172.20.97.149:5000/static/foxVillage.mp4")
       
-        let videoPath = Bundle.main.path(forResource: "20200501-timelapse", ofType: "mpg")
+        let videoPath = Bundle.main.path(forResource: "MVI_5652", ofType: "MP4")
         let videoURL = URL(fileURLWithPath: videoPath!)
         print(videoURL)
         let playerViewController = AVPlayerViewController()
