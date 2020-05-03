@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Le7-UB-wwb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Pyg-TW-dzD">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -8,6 +8,24 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="bY0-tD-KbJ">
+            <objects>
+                <tabBarController id="Pyg-TW-dzD" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dNr-Ws-YhP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Ogq-JJ-xNA" kind="relationship" relationship="viewControllers" id="IOD-QC-Mzm"/>
+                        <segue destination="vA8-iA-Mj3" kind="relationship" relationship="viewControllers" id="9Ed-1Z-sjb"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qVl-wH-Z3p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1938" y="-56"/>
+        </scene>
         <!--Parker View-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -26,6 +44,11 @@
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="gK8-9t-E64"/>
+                                    </mask>
+                                </variation>
                             </wkWebView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="pzE-2q-caP">
                                 <rect key="frame" x="131" y="415.5" width="152" height="178"/>
@@ -86,33 +109,20 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="F72-dq-es4" secondAttribute="bottom" id="3D2-Ie-EIc"/>
                             <constraint firstItem="pzE-2q-caP" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="8EW-Q1-8wo"/>
                             <constraint firstItem="F72-dq-es4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="9YL-eM-nPC"/>
-                            <constraint firstItem="pzE-2q-caP" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="FNf-0D-VHD"/>
                             <constraint firstItem="F72-dq-es4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JXE-ae-BRb"/>
                             <constraint firstItem="pzE-2q-caP" firstAttribute="top" secondItem="F72-dq-es4" secondAttribute="bottom" constant="17" id="ufp-af-m7V"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="F72-dq-es4" secondAttribute="trailing" id="xbK-NY-9cm"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pzE-2q-caP" secondAttribute="trailing" id="zdu-f3-Vxc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="3D2-Ie-EIc"/>
-                                <exclude reference="zdu-f3-Vxc"/>
-                                <exclude reference="FNf-0D-VHD"/>
-                                <exclude reference="ufp-af-m7V"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
                             <mask key="constraints">
                                 <include reference="3D2-Ie-EIc"/>
-                                <exclude reference="xbK-NY-9cm"/>
-                                <include reference="zdu-f3-Vxc"/>
-                                <exclude reference="8EW-Q1-8wo"/>
-                                <include reference="FNf-0D-VHD"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular">
-                            <mask key="constraints">
-                                <include reference="ufp-af-m7V"/>
+                                <include reference="8EW-Q1-8wo"/>
                             </mask>
                         </variation>
                     </view>
@@ -138,25 +148,55 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="855.07246376811599" y="12.723214285714285"/>
+            <point key="canvasLocation" x="223" y="-289"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="tNV-7S-yS0">
+        <!--Parker View-->
+        <scene sceneID="d6g-T0-HZQ">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Le7-UB-wwb" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ogq-JJ-xNA" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Parker View" id="Qkw-2i-bWj"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="peb-ZX-0vj">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4eQ-XH-Awk">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="cFM-o1-fUc"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="tNw-Oy-JXv"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cBh-SO-BfY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LAf-BP-Mle" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-55.072463768115945" y="12.723214285714285"/>
+            <point key="canvasLocation" x="-862" y="-289"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="qgS-Ub-wkc">
+            <objects>
+                <viewController id="vA8-iA-Mj3" customClass="VideoListViewController" customModule="webview2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nPT-Z9-NYz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8kt-YW-c5T">
+                                <rect key="frame" x="184" y="433" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="PlayVideo:" destination="vA8-iA-Mj3" eventType="touchUpInside" id="S8l-dn-eav"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="8kt-YW-c5T" firstAttribute="centerY" secondItem="nPT-Z9-NYz" secondAttribute="centerY" id="VWM-OY-6CD"/>
+                            <constraint firstItem="8kt-YW-c5T" firstAttribute="centerX" secondItem="nPT-Z9-NYz" secondAttribute="centerX" id="dY8-mk-tFU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="h7P-bS-tFC"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="xc5-S0-Ndd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lOH-85-MvT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-862" y="538"/>
         </scene>
     </scenes>
 </document>
