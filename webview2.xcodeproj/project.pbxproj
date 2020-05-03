@@ -14,7 +14,6 @@
 		3397C1DE24459C2800182895 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3397C1DD24459C2800182895 /* Assets.xcassets */; };
 		3397C1E124459C2800182895 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3397C1DF24459C2800182895 /* LaunchScreen.storyboard */; };
 		3397C1EA24459DBC00182895 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3397C1E924459DBC00182895 /* WebKit.framework */; };
-		5760C837245DCCCF00EEFFB8 /* testconvert.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 5760C836245DCCCF00EEFFB8 /* testconvert.m4v */; };
 		5762349E24594B6300C420AF /* VideoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5762349D24594B6300C420AF /* VideoListViewController.swift */; };
 		576234C6245D811800C420AF /* video-whatsapp.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 576234C5245D811800C420AF /* video-whatsapp.mp4 */; };
 		57C5A8A7245DC45200FAD206 /* MVI_5652.MP4 in Resources */ = {isa = PBXBuildFile; fileRef = 57C5A8A6245DC45200FAD206 /* MVI_5652.MP4 */; };
@@ -30,7 +29,6 @@
 		3397C1E024459C2800182895 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3397C1E224459C2800182895 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3397C1E924459DBC00182895 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
-		5760C836245DCCCF00EEFFB8 /* testconvert.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = testconvert.m4v; sourceTree = "<group>"; };
 		5762349D24594B6300C420AF /* VideoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListViewController.swift; sourceTree = "<group>"; };
 		576234C5245D811800C420AF /* video-whatsapp.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "video-whatsapp.mp4"; sourceTree = "<group>"; };
 		57C5A8A6245DC45200FAD206 /* MVI_5652.MP4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = MVI_5652.MP4; sourceTree = "<group>"; };
@@ -70,7 +68,6 @@
 			children = (
 				57C5A8A6245DC45200FAD206 /* MVI_5652.MP4 */,
 				576234C5245D811800C420AF /* video-whatsapp.mp4 */,
-				5760C836245DCCCF00EEFFB8 /* testconvert.m4v */,
 				3397C1D424459C2600182895 /* AppDelegate.swift */,
 				3397C1D624459C2600182895 /* SceneDelegate.swift */,
 				3397C1D824459C2600182895 /* ViewController.swift */,
@@ -154,7 +151,6 @@
 				3397C1DE24459C2800182895 /* Assets.xcassets in Resources */,
 				3397C1DC24459C2600182895 /* Main.storyboard in Resources */,
 				576234C6245D811800C420AF /* video-whatsapp.mp4 in Resources */,
-				5760C837245DCCCF00EEFFB8 /* testconvert.m4v in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
